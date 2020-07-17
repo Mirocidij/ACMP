@@ -1,15 +1,21 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP850 {
+public class ACMP844 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
         int a = in.nextInt();
         int b = in.nextInt();
-        int minA = (a + 1) / 2;
-        int minB = (b + 1) / 2;
+        int s = a * b;
+        double side = Math.sqrt(s);
 
-        out.println(Math.max(minA, minB) + " " + Math.min(a, b));
+        if (side % 1 == 0) {
+            out.println((long) side);
+        } else {
+            out.println(0);
+        }
     }
 
     void run() {
@@ -22,6 +28,6 @@ public class ACMP850 {
     }
 
     public static void main(String[] args) {
-        new ACMP850().run();
+        new ACMP844().run();
     }
 }

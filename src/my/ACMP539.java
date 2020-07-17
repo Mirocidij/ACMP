@@ -1,14 +1,22 @@
+package my;
+
 import java.io.PrintWriter;
-import java.math.BigInteger;
 import java.util.Scanner;
 
-public class ACMP375 {
-    // your solution here
+public class ACMP539 {
     private void solve(Scanner in, PrintWriter out) {
-        int from = in.nextInt();
-        int to = in.nextInt();
-        BigInteger bigInteger = in.nextBigInteger(from);
-        out.println(bigInteger.toString(to).toUpperCase());
+        int count = in.nextInt();
+
+        if (count == 1) {
+            out.println(0);
+            return;
+        }
+
+        if (count % 2 == 0) {
+            out.println(count / 2);
+        } else {
+            out.println(count);
+        }
     }
 
     void run() {
@@ -21,6 +29,6 @@ public class ACMP375 {
     }
 
     public static void main(String[] args) {
-        new ACMP375().run();
+        new ACMP539().run();
     }
 }

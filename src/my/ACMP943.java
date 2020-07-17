@@ -1,19 +1,18 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP844 {
+public class ACMP943 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int a = in.nextInt();
-        int b = in.nextInt();
-        int s = a * b;
-        double side = Math.sqrt(s);
+        int n = in.nextInt();
+        int m = in.nextInt();
+        int y = in.nextInt();
+        int x = in.nextInt();
 
-        if (side % 1 == 0.0) {
-            out.println((long) side);
-        } else {
-            out.println(0);
-        }
+        int num = (y - 1) * m;
+        out.println(y % 2 == 0 ? num + (m - x) : num + (x - 1));
     }
 
     void run() {
@@ -26,6 +25,6 @@ public class ACMP844 {
     }
 
     public static void main(String[] args) {
-        new ACMP844().run();
+        new ACMP943().run();
     }
 }

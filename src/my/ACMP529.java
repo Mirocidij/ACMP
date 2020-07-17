@@ -1,17 +1,18 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP940 {
+public class ACMP529 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int index = in.nextInt() - 1;
-        char[] chars = in.nextLine().trim().toCharArray();
+        int x1 = in.nextInt();
+        int y1 = in.nextInt();
+        int x2 = in.nextInt();
+        int y2 = in.nextInt();
 
-        for (int i = 0; i < chars.length; i++) {
-            if (i == index) continue;
-
-            out.print(chars[i]);
-        }
+        double a = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+        out.println(a);
     }
 
     void run() {
@@ -24,6 +25,8 @@ public class ACMP940 {
     }
 
     public static void main(String[] args) {
-        new ACMP940().run();
+        new ACMP529().run();
     }
 }
+
+

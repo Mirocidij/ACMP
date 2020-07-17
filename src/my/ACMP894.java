@@ -1,16 +1,21 @@
+package my;
+
 import java.io.PrintWriter;
+import java.util.Locale;
 import java.util.Scanner;
 
-public class ACMP22 {
+public class ACMP894 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        String binary = Integer.toBinaryString(Integer.parseInt(in.next()));
-        int count = 0;
-        for (char c : binary.toCharArray()) {
-            if (c == '1') count++;
-        }
+        String[] nums = in.nextLine().split(" ");
 
-        out.println(count);
+        double s = Double.parseDouble(nums[0]);
+        double r1 = Double.parseDouble(nums[1]);
+        double r2 = Math.sqrt(
+            (r1*r1) - (s / Math.PI)
+        );
+
+        out.printf(Locale.US,"%.3f", r2);
     }
 
     void run() {
@@ -23,6 +28,6 @@ public class ACMP22 {
     }
 
     public static void main(String[] args) {
-        new ACMP22().run();
+        new ACMP894().run();
     }
 }

@@ -1,14 +1,14 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP794 {
+public class ACMP86 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
-        int m = in.nextInt();
-        int k = in.nextInt();
 
-
+        out.println(n * n - (n * 3 - 2));
     }
 
     void run() {
@@ -21,6 +21,8 @@ public class ACMP794 {
     }
 
     public static void main(String[] args) {
-        new ACMP794().run();
+        new ACMP86().run();
     }
 }
+
+

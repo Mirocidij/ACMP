@@ -1,16 +1,18 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP943 {
+public class ACMP22 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
-        int m = in.nextInt();
-        int y = in.nextInt();
-        int x = in.nextInt();
+        String binary = Integer.toBinaryString(Integer.parseInt(in.next()));
+        int count = 0;
+        for (char c : binary.toCharArray()) {
+            if (c == '1') count++;
+        }
 
-        int num = (y - 1) * m;
-        out.println(y % 2 == 0 ? num + (m - x) : num + (x - 1));
+        out.println(count);
     }
 
     void run() {
@@ -23,6 +25,6 @@ public class ACMP943 {
     }
 
     public static void main(String[] args) {
-        new ACMP943().run();
+        new ACMP22().run();
     }
 }

@@ -1,3 +1,5 @@
+package my;
+
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.math.MathContext;

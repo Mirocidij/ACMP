@@ -1,21 +1,24 @@
+package my;
+
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP929 {
+public class ACMP623 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        long n = in.nextLong();
-        long copyOfN = n;
-        long sum = 0;
+        long n1 = 1;
+        long n2 = 1;
+        long tmp;
 
-        for (int i = 6; i > 0; i--) {
-            if (n >= i) {
-                sum += n / i * (7 - i);
-                n %= i;
-            }
+        long n = in.nextInt();
+
+        for (int i = 0; i < n; i++) {
+            tmp = n2;
+            n2 = (n2 + n1) % 10;
+            n1 = tmp;
         }
 
-        out.println(sum + " " + copyOfN * 6);
+        out.println(n1 );
     }
 
     void run() {
@@ -28,8 +31,6 @@ public class ACMP929 {
     }
 
     public static void main(String[] args) {
-        new ACMP929().run();
+        new ACMP623().run();
     }
 }
-
-
