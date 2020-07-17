@@ -1,21 +1,17 @@
-package my;
-
 import java.io.PrintWriter;
-import java.util.Locale;
 import java.util.Scanner;
 
-public class ACMP894 {
+public class ACMP940 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        String[] nums = in.nextLine().split(" ");
+        int index = in.nextInt() - 1;
+        char[] chars = in.nextLine().trim().toCharArray();
 
-        double s = Double.parseDouble(nums[0]);
-        double r1 = Double.parseDouble(nums[1]);
-        double r2 = Math.sqrt(
-            (r1*r1) - (s / Math.PI)
-        );
+        for (int i = 0; i < chars.length; i++) {
+            if (i == index) continue;
 
-        out.printf(Locale.US,"%.3f", r2);
+            out.print(chars[i]);
+        }
     }
 
     void run() {
@@ -28,6 +24,6 @@ public class ACMP894 {
     }
 
     public static void main(String[] args) {
-        new ACMP894().run();
+        new ACMP940().run();
     }
 }

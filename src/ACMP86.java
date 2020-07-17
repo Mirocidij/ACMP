@@ -1,18 +1,11 @@
-package my;
-
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP529 {
+public class ACMP86 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int x1 = in.nextInt();
-        int y1 = in.nextInt();
-        int x2 = in.nextInt();
-        int y2 = in.nextInt();
-
-        double a = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-        out.println(a);
+        int n = in.nextInt();
+        out.println(n * n - (n * 3 - 2));
     }
 
     void run() {
@@ -25,7 +18,7 @@ public class ACMP529 {
     }
 
     public static void main(String[] args) {
-        new ACMP529().run();
+        new ACMP86().run();
     }
 }
 

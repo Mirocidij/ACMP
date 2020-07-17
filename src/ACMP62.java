@@ -1,5 +1,3 @@
-package my;
-
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -39,5 +37,3 @@ public class ACMP62 {
         new ACMP62().run();
     }
 }
-
-

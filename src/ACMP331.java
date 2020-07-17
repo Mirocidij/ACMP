@@ -1,5 +1,3 @@
-package my;
-
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.Scanner;

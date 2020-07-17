@@ -1,22 +1,21 @@
-package my;
-
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP539 {
+public class ACMP147 {
+    // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int count = in.nextInt();
+        int num = in.nextInt();
+        int a = 0;
+        int b = 1;
+        int tmp;
 
-        if (count == 1) {
-            out.println(0);
-            return;
+        for (int i = 0; i < num; i++) {
+            tmp = b;
+            b += a;
+            a = tmp;
         }
 
-        if (count % 2 == 0) {
-            out.println(count / 2);
-        } else {
-            out.println(count);
-        }
+        out.println(a);
     }
 
     void run() {
@@ -29,6 +28,6 @@ public class ACMP539 {
     }
 
     public static void main(String[] args) {
-        new ACMP539().run();
+        new ACMP147().run();
     }
 }

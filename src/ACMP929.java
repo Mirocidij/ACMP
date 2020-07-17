@@ -1,18 +1,21 @@
-package my;
-
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP22 {
+public class ACMP929 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        String binary = Integer.toBinaryString(Integer.parseInt(in.next()));
-        int count = 0;
-        for (char c : binary.toCharArray()) {
-            if (c == '1') count++;
+        long n = in.nextLong();
+        long copyOfN = n;
+        long sum = 0;
+
+        for (int i = 6; i > 0; i--) {
+            if (n >= i) {
+                sum += n / i * (7 - i);
+                n %= i;
+            }
         }
 
-        out.println(count);
+        out.println(sum + " " + copyOfN * 6);
     }
 
     void run() {
@@ -25,6 +28,8 @@ public class ACMP22 {
     }
 
     public static void main(String[] args) {
-        new ACMP22().run();
+        new ACMP929().run();
     }
 }
+
+

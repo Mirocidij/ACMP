@@ -1,19 +1,19 @@
-package my;
-
 import java.io.PrintWriter;
+import java.util.Locale;
 import java.util.Scanner;
 
-public class ACMP940 {
+public class ACMP894 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int index = in.nextInt() - 1;
-        char[] chars = in.nextLine().trim().toCharArray();
+        String[] nums = in.nextLine().split(" ");
 
-        for (int i = 0; i < chars.length; i++) {
-            if (i == index) continue;
+        double s = Double.parseDouble(nums[0]);
+        double r1 = Double.parseDouble(nums[1]);
+        double r2 = Math.sqrt(
+            (r1*r1) - (s / Math.PI)
+        );
 
-            out.print(chars[i]);
-        }
+        out.printf(Locale.US,"%.3f", r2);
     }
 
     void run() {
@@ -26,6 +26,6 @@ public class ACMP940 {
     }
 
     public static void main(String[] args) {
-        new ACMP940().run();
+        new ACMP894().run();
     }
 }

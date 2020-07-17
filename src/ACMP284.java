@@ -1,28 +1,28 @@
-package my;
-
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP131 {
+public class ACMP284 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
         int count = in.nextInt();
-        int index = -1;
-        int maxAge = 0;
-        int cAge = 0;
-        int cSex = 0;
+        int[] array = new int[count];
 
         for (int i = 0; i < count; i++) {
-            cAge = in.nextInt();
-            cSex = in.nextInt();
-
-            if (cSex == 1 && cAge > maxAge) {
-                index = i + 1;
-                maxAge = cAge;
-            }
+            array[i] = in.nextInt();
         }
 
-        out.println(index);
+        count = in.nextInt();
+
+        for (int i = 0; i < count; i++) {
+            int from = in.nextInt() - 1;
+            int to = in.nextInt();
+
+            while (from < to) {
+                out.print(array[from++] + " ");
+            }
+
+            out.println();
+        }
     }
 
     void run() {
@@ -35,6 +35,6 @@ public class ACMP131 {
     }
 
     public static void main(String[] args) {
-        new ACMP131().run();
+        new ACMP284().run();
     }
 }
