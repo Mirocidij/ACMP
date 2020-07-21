@@ -1,5 +1,7 @@
 .idea
 ACMP.iml
 /out
+/cpp
 
-*.class;
+*.class
+*.exe
