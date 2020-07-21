@@ -1,7 +1,7 @@
 .idea
-ACMP.iml
 /out
-/cpp
+/cpp/.vscode
 
 *.class
-*.exe
+ACMP.iml
+/cpp/*.exe
