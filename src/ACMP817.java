@@ -1,12 +1,19 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP817 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        long n = in.nextLong(),
+            m = in.nextLong();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        long width = in.nextLong(),
+            length = in.nextLong();
+
+        long crossingCount = n * m;
+        long roadCount = n + m;
+        long s = roadCount * width * length - (crossingCount * width * width);
+        out.println(s);
     }
 
     void run() {
@@ -19,6 +26,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP817().run();
     }
 }

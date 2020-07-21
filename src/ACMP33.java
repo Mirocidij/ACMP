@@ -1,12 +1,14 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP33 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        int garry = in.nextInt(),
+            larry = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        int together = Math.min(10, (garry + larry) - 1);
+        out.println((together - garry) + " " + (together - larry));
     }
 
     void run() {
@@ -19,6 +21,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP33().run();
     }
 }

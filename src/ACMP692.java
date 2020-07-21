@@ -1,12 +1,17 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP692 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        char[] binaryBits = Integer.toBinaryString(in.nextInt()).toCharArray();
+        int oneCount = 0;
+        for (char bit : binaryBits) {
+            if (bit == '1') oneCount++;
+        }
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        if (oneCount == 1) out.println("YES");
+        else out.println("NO");
     }
 
     void run() {
@@ -19,6 +24,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP692().run();
     }
 }

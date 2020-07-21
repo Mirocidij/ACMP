@@ -1,12 +1,21 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP637 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
+        int[] commands = new int[n];
+        for (int i = 0; i < n; i++) {
+            commands[i] = in.nextInt();
+        }
+        int hallCount = in.nextInt();
+        int count = 0;
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        for (int c : commands)
+            count += Math.min(c, hallCount);
+
+        out.println(count);
     }
 
     void run() {
@@ -19,6 +28,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP637().run();
     }
 }

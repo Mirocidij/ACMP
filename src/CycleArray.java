@@ -1,12 +1,19 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class CycleArray {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        int n = 10;
+        int[] list = new int[n];
+        for (int i = 0; i < list.length; i++) {
+            list[i] = i * 100;
+            System.out.println(list[i]);
+        }
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        for (int i = 0; i < 10000; i++) {
+            System.out.println(list[i % n] + "\t " + i);
+        }
     }
 
     void run() {
@@ -19,6 +26,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new CycleArray().run();
     }
 }

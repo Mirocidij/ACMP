@@ -1,12 +1,16 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP755 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        int misha = in.nextInt(),
+            masha = in.nextInt(),
+            z = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        if (misha + masha >= z) {
+            out.println(misha + masha - z);
+        } else out.println("Impossible");
     }
 
     void run() {
@@ -19,6 +23,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP755().run();
     }
 }

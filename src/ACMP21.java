@@ -1,12 +1,17 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP21 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
-
-        out.println(n * n - ((n - 1) * 3 + 1));
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < 3; i++) {
+            int salary = in.nextInt();
+            max = Math.max(salary, max);
+            min = Math.min(salary, min);
+        }
+        out.println(max - min);
     }
 
     void run() {
@@ -19,6 +24,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP21().run();
     }
 }

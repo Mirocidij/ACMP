@@ -1,12 +1,23 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP264 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
         int n = in.nextInt();
+        int maxSeq = 0;
+        int curSeq = 0;
+        for (int i = 0; i < n; i++) {
+            int t = in.nextInt();
+            if (t > 0) {
+                curSeq++;
+                if (curSeq > maxSeq) maxSeq = curSeq;
+            } else {
+                curSeq = 0;
+            }
+        }
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        out.println(maxSeq);
     }
 
     void run() {
@@ -19,6 +30,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP264().run();
     }
 }

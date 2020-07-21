@@ -1,12 +1,15 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP1243 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
+        int a = in.nextInt();
+        int b = in.nextInt();
         int n = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        int cent = (a * 100 + b) * n;
+        out.printf("%d %d", cent / 100, cent % 100);
     }
 
     void run() {
@@ -19,6 +22,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP1243().run();
     }
 }

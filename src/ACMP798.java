@@ -1,12 +1,18 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP798 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        long m = in.nextLong(),
+            n = in.nextLong(),
+            i = in.nextLong(),
+            j = in.nextLong(),
+            c = in.nextLong();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        if (m * n % 2 == 0) out.println("equal");
+        else if ((i + j) % 2 == c) out.println("black");
+        else out.println("white");
     }
 
     void run() {
@@ -19,6 +25,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP798().run();
     }
 }

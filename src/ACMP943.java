@@ -9,8 +9,7 @@ public class ACMP943 {
         int y = in.nextInt();
         int x = in.nextInt();
 
-        int num = (y - 1) * m;
-        out.println(y % 2 == 0 ? num + (m - x) : num + (x - 1));
+        out.println(y % 2 == 0 ? m * y - x : m * (y - 1) + (x - 1));
     }
 
     void run() {

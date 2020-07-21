@@ -1,12 +1,14 @@
 import java.io.PrintWriter;
+import java.math.BigInteger;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP_MENSH_TR1_E {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
+        BigInteger a = in.nextBigInteger();
         int n = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        out.println(a.pow(n));
     }
 
     void run() {
@@ -19,6 +21,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP_MENSH_TR1_E().run();
     }
 }

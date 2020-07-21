@@ -1,12 +1,14 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP195 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        int n = in.nextInt(),
+            a = in.nextInt(),
+            b = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        out.println(n * a * b * 2);
     }
 
     void run() {
@@ -19,6 +21,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP195().run();
     }
 }

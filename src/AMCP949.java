@@ -1,0 +1,2 @@
+public class AMCP949 {
+}

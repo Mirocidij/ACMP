@@ -1,12 +1,15 @@
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class ACMP_86 {
+public class ACMP766 {
     // your solution here
     private void solve(Scanner in, PrintWriter out) {
-        int n = in.nextInt();
+        int n = in.nextInt(),
+            m = in.nextInt(),
+            k = in.nextInt();
 
-        out.println(n * n - ((n - 1) * 3 + 1));
+        if (n * m >= k) out.println("YES");
+        else out.println("NO");
     }
 
     void run() {
@@ -19,6 +22,6 @@ public class ACMP_86 {
     }
 
     public static void main(String[] args) {
-        new ACMP_86().run();
+        new ACMP766().run();
     }
 }
